@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./app/styles/colors";
+@use "./app/styles/normalize.scss";
+@use "./app/styles/spacing";
+@use "./app/styles/typings";
+
+html, body {
+  color: colors.$primary-text-color;
+  background-color: #fff;
+  font-size: typings.$default-body-font-size;
+
+  font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  height: initial;
+  width: initial;
+  overflow: initial;
+  scroll-behavior: smooth;
+}
+
+.mobile {
+  display: none!important;
+}
+
+@media (max-width: 1300px) {
+  .desktop {
+    display: none!important;
+  }
+  
+  .mobile {
+    display: block;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+  padding: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #863dfc;
+  border-radius: 0;
+}
+
+h1 {
+  font-size: typings.$default-font-size-h1;
+}
+
+h2 {
+  font-size: typings.$default-font-size-h2;
+}
+
+p {
+  font-size: typings.$default-body-font-size;
+}
+
+a {
+  color: colors.$primary-text-color;
+  text-decoration: none;
+}
+
+.secondary-text {
+  color: colors.$secondary-text-color;
+}
+
+button {
+  font-size: typings.$default-button-font-size;
+  background-color: colors.$secondary-color;
+  height: 50px;
+  width: 80px;
+  border-radius: 9px;
+  border: none;
+  color: colors.$primary-text-color;
+}
+
+.main-content-container {
+  padding: spacing.$default-base-spacing * 16 0;
+}
+
+.container {
+  max-width: 1342px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gradient {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #863dfc, #1946b0);
+}
