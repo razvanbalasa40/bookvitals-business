@@ -24,7 +24,7 @@ export class HomeComponent {
 
   public galleryScrollPercent = -8.8;
   public formScrollPercent = -10;
-  public blobScrollPercent = 21;
+  public blobScrollPercent = 8;
   public router: Router = inject(Router);
   public showProducts = false;
   public menuToggled = false;
@@ -48,34 +48,34 @@ export class HomeComponent {
   };
 
   public heroLottieOptions: AnimationOptions = {
-    path: 'assets/lottie/responsive-website-design.json',
+    path: 'assets/lottie/ai-reading-book.json',
     loop: true,
     autoplay: true,
   };
 
   public portraitsTop = [
     {
-      image: 'Laurentiu.png',
+      image: 'Laurentiu.webp',
       name: 'Laurențiu Bălașa',
       occupation: 'CEO',
     },
     {
-      image: 'Marius.png',
+      image: 'Marius.webp',
       name: 'Marius Iordache',
       occupation: 'Programmer',
     },
     {
-      image: 'Razvan.png',
+      image: 'Razvan.webp',
       name: 'Răzvan Bălașa',
       occupation: 'Programmer',
     },
     {
-      image: 'Mariusica.png',
+      image: 'Mariusica.webp',
       name: 'Marius Stancu',
       occupation: 'Marketing Expert',
     },
     {
-      image: 'Andreea.png',
+      image: 'Andreea.webp',
       name: 'Andreea Trandafir',
       occupation: 'Marketing Expert',
     },
@@ -83,22 +83,22 @@ export class HomeComponent {
 
   public portraitsBottom = [
     {
-      image: 'man-portrait.png',
-      name: 'Bogdan',
+      image: 'Irina.webp',
+      name: 'Irina',
       occupation: 'UX/UI',
     },
     {
-      image: 'Otilia.png',
+      image: 'Otilia.webp',
       name: 'Otilia Bărbat',
       occupation: 'UX/UI & Graphic Designer',
     },
     {
-      image: 'Cristina.png',
+      image: 'Cristina.webp',
       name: 'Cristina Lupu',
       occupation: 'ASO Manager',
     },
     {
-      image: 'Lidia.png',
+      image: 'Lidia.webp',
       name: 'Lidia Dajicu',
       occupation: 'HR Operations Officer',
     },
@@ -129,7 +129,9 @@ export class HomeComponent {
 
   @HostListener('window:scroll', ['$event'])
   doSomething(event) {
-    if (this.productsSection.nativeElement.getBoundingClientRect().top <= 250) {
+    if (
+      this.productsSection.nativeElement.getBoundingClientRect().bottom >= 0
+    ) {
       this.showProducts = true;
     }
 
@@ -142,21 +144,22 @@ export class HomeComponent {
           this.teamsSection.nativeElement.getBoundingClientRect().top / 8 - 90;
       } else {
         this.galleryScrollPercent =
-          this.teamsSection.nativeElement.getBoundingClientRect().top / 8 - 120;
+          this.teamsSection.nativeElement.getBoundingClientRect().top / 9 - 120;
       }
     }
 
     if (
-      this.contactSection.nativeElement.getBoundingClientRect().top <= 350 &&
+      this.contactSection.nativeElement.getBoundingClientRect().top <= 400 &&
       this.contactSection.nativeElement.getBoundingClientRect().top >= 0
     ) {
       this.formScrollPercent =
-        this.teamsSection.nativeElement.getBoundingClientRect().top / 7 + 30;
+        this.teamsSection.nativeElement.getBoundingClientRect().top / 8 + 70;
     }
 
     if (
-      this.missionSection.nativeElement.getBoundingClientRect().top <= 550 &&
-      this.missionSection.nativeElement.getBoundingClientRect().top >= 0
+      this.missionSection.nativeElement.getBoundingClientRect().bottom <=
+        1800 &&
+      this.missionSection.nativeElement.getBoundingClientRect().bottom >= 0
     ) {
       this.blobScrollPercent =
         this.missionSection.nativeElement.getBoundingClientRect().top / 9 - 40;

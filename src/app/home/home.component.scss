@@ -19,7 +19,7 @@ p.gradient {
 }
 
 .background-container {
-  z-index: 1;
+  z-index: 2;
   position: relative;
   &::before {
     content: "";
@@ -28,8 +28,8 @@ p.gradient {
     left: 0;
     width: 100%; 
     height: 100%;
-    background-image: url('../../assets/img/purple-more-abstract.jpg');
-    filter: blur(2px);
+    background-image: url('../../assets/img//purple-more-abstract.webp');
+    // filter: blur(2px);
     background-size: cover;
   }
 
@@ -82,9 +82,10 @@ p.gradient {
             justify-self: start;
             margin: 0;
             padding: 0;
-
+            
             li {
               display: inline-block;
+              padding: spacing.$default-base-spacing 0px;
 
               #logo {
                 width: 40px;
@@ -92,7 +93,7 @@ p.gradient {
                 margin-top: 7px;
               }
 
-              #logo-text {
+              .logo-text {
                 font-style: normal;
                 font-weight: 700;
                 font-size: typings.$default-font-size-h1;
@@ -195,7 +196,8 @@ p.gradient {
               z-index: 21;
               
               li {
-                padding-top: 0;
+                padding: 0;
+                padding-right: 16px;
               }
             }
           }
@@ -239,17 +241,7 @@ p.gradient {
       // margin-left: -100px;
       width: 30%;
       // margin-bottom: 175px;
-    }
-
-    #hero-image {
       display: none;
-      position: absolute;
-      left: 50%;
-      width: 100px;
-      z-index: 3;
-      bottom: 0;
-      margin-left: -50px;
-      margin-bottom: 223px;
     }
 
     #circular-text {
@@ -275,17 +267,17 @@ p.gradient {
 
       .smaller-text {
         font-size: 1vw;
-        // line-height: 30px;
+        line-height: 2vw;
         color: rgb(196, 196, 196);
         padding-top: 10px;
-      }
+      } 
     }
 
     #scroll-btn {
       position: absolute;
-      height: 10em;
-      width: 5.25em;
-      border: 0.5em solid #fff;
+      height: 8em;
+      width: 4em;
+      border: 0.3em solid #fff;
       margin: auto;
       left: 0;
       right: 0;
@@ -317,7 +309,7 @@ p.gradient {
         }
 
         100% {
-          transform: translateY(2.3em);
+          transform: translateY(2.1em);
           opacity: 0;
         }
       }
@@ -328,9 +320,9 @@ p.gradient {
         width: 12em;
         display: block;
         text-align: center;
-        left: -4.5em;
+        left: -4em;
         bottom: -2.5em;
-        font-size: 1rem;
+        font-size: 0.75rem;
         color: #fff;
         letter-spacing: 2px;
         font-weight: 700;
@@ -341,11 +333,9 @@ p.gradient {
 
 .mission-section {
   background-color: #fff;
-  // background-image: url('../../assets/img/rocket-background.jpg');
-  // background-size: cover;
   background-repeat: no-repeat;
   // min-height: 1100px;
-  border-bottom: 1px solid #acacac;
+  // border-bottom: 1px solid #acacac;
   position: relative;
   z-index: 1;
 
@@ -354,30 +344,42 @@ p.gradient {
     margin-top: 0;
   }
 
+  .section-title {
+    margin-bottom: 64px;
+    position: relative;
+    z-index: 2;
+  }
+  
+
   .mission-text {
-    padding: 32px 64px;
+    padding: 16px 64px;
     max-width: 600px;
   }
   .mission-cards {
     padding-left: 64px;
     z-index: 2;
     position: relative;
+    
 
     .mission-card {
+      margin-bottom: 64px;
+
       h1 {
         padding-left: 64px;
+
       }
 
       p {
         margin: 0;
         font-size: 18px;
+        line-height: 36px;
       }
     }
   }
 
   #blob-image {
     width: 400px;
-    filter: blur(1px);
+    // filter: blur(1px);
     position: absolute;
     right: 20%;
     bottom: 10px;
@@ -386,7 +388,7 @@ p.gradient {
 }
 
 .team-section {
-  background-color: #f3e6ff;
+  background-color: #fdfbff;
   z-index: 1;
   position: relative;
   display: flex;
@@ -401,8 +403,6 @@ p.gradient {
   .team-div {
     border-right: 1px solid #acacac;
 
-    
-
     h1 {
       font-size: 3.25rem;
       margin-top: 0;
@@ -410,7 +410,9 @@ p.gradient {
     }
 
     p {
-      padding: 32px 64px;
+      padding: 24px 64px;
+      line-height: 32px;
+      margin: 0;
     }
 
     p.gradient {
@@ -421,7 +423,7 @@ p.gradient {
 
     .team-portraits {
       display: flex;
-      padding: 32px 64px;
+      padding: 24px 64px;
       flex-direction: column;
 
       .portraits {
@@ -472,6 +474,7 @@ p.gradient {
       width: 100%;
       // max-height: 250px;
       // max-width: 440px;
+      height: auto;
       margin-top: 18px;
       position: relative;
       border-radius: 25px;
@@ -479,7 +482,7 @@ p.gradient {
     }
 
     .gradient-top {
-      background-image: linear-gradient(#f3e6ff, rgba(243, 230, 255, 0.6) 50%, rgba(243, 230, 255, 0));
+      background-image: linear-gradient(#fdfbff, rgba(253, 251, 255, 0.6) 50%, rgba(243, 230, 255, 0));
       z-index: 2;
       width: 100%;
       height: 4rem;
@@ -489,7 +492,7 @@ p.gradient {
     }
 
     .gradient-bottom {
-      background-image: linear-gradient(rgba(243, 230, 255, 0), rgba(243, 230, 255, .6) 50%, #f3e6ff);
+      background-image: linear-gradient(rgba(243, 230, 255, 0), rgba(253, 251, 255, .6) 50%, #fdfbff);
       top: auto;
       bottom: 0;
       z-index: 2;
@@ -518,8 +521,10 @@ p.gradient {
 .products-section {
   display: flex;
   justify-content: center;
-  padding: 60px;
+  // padding: 60px;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 12px;
+  z-index: 1;
 
   :hover {
     cursor: pointer;
@@ -532,15 +537,29 @@ p.gradient {
     }
   }
 
+  .basmo-container {
+    // border-right: 1px solid #acacac;
+  }
+  
   .basmo-container, .bibleChat-container {
-    width: 442px;
-    height: 736px;
+    // width: 442px;
+    // height: 736px;
+    width: 50%;
+    h1 {
+      position: relative;
+      z-index: 1;
+    }
 
     .bottom-div {
-      cursor:none;
+      height: 200px;
+      cursor: none;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 12px;
+
       a {
         width: fit-content;
       }
+
       h2, p {
         cursor: text;
       }
@@ -569,10 +588,11 @@ p.gradient {
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
   }
 
   .gradient-bottom {
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .6) 50%, #f3e6ff);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .6) 50%, #fdfbff);
     top: auto;
     bottom: 0;
     z-index: 2;
@@ -580,6 +600,7 @@ p.gradient {
     height: 4rem;
     position: absolute;
     left: 0;
+    // display: none;
   }
 
   .rotated-text-container {
@@ -600,7 +621,9 @@ p.gradient {
 
   .product-image {
     height: 600px;
+    width: auto;
     transition: transform 0.5s;
+    animation: slide-from-bottom 1.5s ease-in-out;
   }
 
   @keyframes slide-from-top {
@@ -625,14 +648,14 @@ p.gradient {
 
   .basmo {
     z-index: 0;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     position: relative;
-    margin: 0px 30px;
+    // margin: 0px 30px;
     background-color: #FBE74D;
     padding: 20px;
-    border-radius: 25px;
-    animation: slide-from-top 1.5s ease-in-out;
-    background-image: url('../../assets/img/products/books-doodles-overlay.png');
+    // border-radius: 25px;
+    
+    background-image: url('../../assets/img/products/books-doodles-overlay.webp');
 
     h1 {    
       background: #1c1c1c;
@@ -649,11 +672,16 @@ p.gradient {
 
     .bottom-div {
       background-color: #FBE74D;
+      box-shadow: rgba(0, 0, 0, 0.24) -8px 1px 12px;
     }
 
     .product-image {
-      height: 540px;
+      height: 531px;
       padding: 40px;
+      width: auto;
+      left: 50%;
+      position: relative;
+      margin-left: -169px;
     }
 
     .ribbon span {
@@ -664,13 +692,13 @@ p.gradient {
 
   .bibleChat {
     z-index: 0;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    margin: 0px 30px;
+    // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    // margin: 0px 30px;
     background-color: #f8f6f3;
     padding: 20px;
-    border-radius: 12px;
+    // border-radius: 12px;
     position: relative;
-    animation: slide-from-bottom 1.5s ease-in-out;
+    // animation: slide-from-bottom 1.5s ease-in-out;
     
     &::before {
       content: "";
@@ -686,6 +714,8 @@ p.gradient {
     .product-image {
       z-index: 1;
       position: relative;
+      left: 50%;
+      margin-left: -165px;
     }
 
     h1 {
@@ -698,6 +728,7 @@ p.gradient {
     .bottom-div {
       z-index: 2;
       background-color: #f8f6f3;
+      box-shadow: rgba(0, 0, 0, 0.24) 8px 1px 12px;
     }
 
     .ribbon span {
@@ -715,9 +746,9 @@ p.gradient {
     display: flex;
     flex-direction: column;
 
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px;
+    // border-bottom-left-radius: 12px;
+    // border-bottom-right-radius: 12px;
+    // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px;
     padding: 8px 32px;
     box-sizing: border-box;
 
@@ -787,7 +818,7 @@ p.gradient {
   width: 100%;
   height: 130vh;
   // margin-bottom: -500px;
-  background-image: url('../../assets/img/plane-trail.jpg');
+  background-image: url('../../assets/img/plane-trail.webp');
   background-size: contain;
   position: relative;
   background-repeat: no-repeat;
@@ -801,16 +832,20 @@ p.gradient {
   }
 
   .gradient-top {
-    background-image: linear-gradient(#f3e6ff, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(#fdfbff, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, 0));
     z-index: 2;
     width: 100%;
     height: 4rem;
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: -22px;
+    margin-top: -24px;
   }
 
+  &:hover img {
+    // opacity: 0;
+    pointer-events: none;
+  }
 
   img {
     position: absolute;
@@ -836,7 +871,7 @@ p.gradient {
     margin-left: 60px;
     margin-right: 60px;
     padding: 32px;
-    padding-bottom: 128px;
+    padding-bottom: 330px;
     background-color: rgba($color: #fff9e6, $alpha: 1);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 12px;
@@ -848,6 +883,25 @@ p.gradient {
     left: 50%;
     margin-left: -27vw;
     bottom: 0;
+
+ 
+
+      button {
+        margin-left: auto;
+        background-color: transparent;
+        background: #5684A6;
+        border: 2px solid #5684A6;
+        color: #fff9e6;
+        box-shadow: #0000001f 0 1px 3px, #0000003d 0 1px 2px;
+        cursor: pointer;
+        margin-right: auto;
+        margin-top: 24px;
+        font-size: 24px;
+        padding: 12px 18px;
+        height: auto;
+        width: auto;
+      }
+    
 
     label {
       margin-top: 24px;
@@ -883,8 +937,12 @@ p.gradient {
       height: 100svh ;
 
       #scroll-btn {
-        height: 8em;
-        width: 4.25em;
+        height: 6.5em;
+        width: 3.25em;
+
+        &::after {
+          left: -4.7em;
+        }
       }
       
       #circular-text {
@@ -892,7 +950,8 @@ p.gradient {
         z-index: 2;
         position: absolute;
         left: 10%;
-        top: 45%;
+        // top: 45%;
+        top: 20%;
         color: #fff;
         text-align: left;
 
@@ -901,7 +960,13 @@ p.gradient {
         }
 
         .smaller-text {
-          display: none;
+          // display: none;
+          font-size: 4vw;
+          line-height: 7vw;
+
+          br {
+            display: none;
+          }    
         }
       }
 
@@ -933,6 +998,7 @@ p.gradient {
           padding-left: 16px;
           padding-right: 16px;
           font-size: 16px;
+          line-height: 32px;
         }
       }
     }
@@ -948,12 +1014,16 @@ p.gradient {
       z-index: 2;
       position: relative;
     }
+
+    #blob-image {
+      display: none;
+    }
   }
   
   .products-section {
     flex-direction: column;
     align-items: center;
-    gap: 48px;
+    // gap: 48px;
     align-self: baseline;
 
     .rotated-text-container{
@@ -971,35 +1041,35 @@ p.gradient {
     } 
 
     .basmo-container {
-      width: 360px;
-      height: 600px;
+      // width: 360px;
+      // height: 600px;
+      width: 100vw;
     }
   
     .bibleChat-container {
-      width: 360px;
-      height: 600px;
+      // width: 360px;
+      // height: 600px;
+      width: 100vw;
 
-      .bottom-div {
-        height: 250px;
-      }
+      // .bottom-div {
+      //   height: 250px;
+      // }
     }
 
-    .basmo {
-      .product-image {
-        height: 410px;
-        padding: 30px;
-      }
-    }
+    // .basmo {
+    //   .product-image {
+    //     height: 410px;
+    //     padding: 30px;
+    //   }
+    // }
     
-    .bibleChat {
-      .product-image {
-        height: 500px;
-        margin-left: -10px;
-      }
-    }
+    // .bibleChat {
+    //   .product-image {
+    //     height: 500px;
+    //     margin-left: -10px;
+    //   }
+    // }
   }
-
-  
 
   .team-section {
     // display: none;
@@ -1052,7 +1122,7 @@ p.gradient {
 
   .contact-section {
 
-    height: 85vh;
+    height: 95vh;
 
     .gradient-top {
       margin-top: -24px;
@@ -1086,10 +1156,10 @@ p.gradient {
       left: 50%;
       margin-left: -40vw;
       box-sizing: border-box;
-      bottom: -50px;
+      bottom: -300px;
       padding: 16px;
       padding-bottom: 32px;
-
+      padding-bottom: 330px;
       label {
         margin-top: 16px;
       }

@@ -25,14 +25,15 @@
           margin-right: auto;
 
         >div {
-          border-right: 1px solid white;
-          padding-left: 110px;
-          padding-right: 110px;
+          // border-right: 1px solid white;
+          padding-left: 100px;
+          padding-right: 100px;
           margin-left: auto;
           margin-right: auto;
         }
 
         .right {
+          max-width: 175px;
           border-right: none;
 
           .social {
@@ -52,6 +53,10 @@
 
           li {
             margin-top: 10px;
+            
+            a {
+              color: #fff;
+            }
           }
         }
 
@@ -98,6 +103,7 @@
           }
 
           .right {
+            max-width: unset;
             .social {
               max-width: unset;
               margin-bottom: 16px;

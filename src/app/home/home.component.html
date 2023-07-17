@@ -4,8 +4,8 @@
       <header class="header">
           <nav>
             <ul class="nav-left">
-              <li><img src="favicon.ico" alt="Social boost icon" id="logo" [routerLink]="['/']" height="68px" width="68px"></li>
-              <li><h1 id="logo-text" [routerLink]="['/']">Book Vitals</h1></li>
+              <!-- <li><img src="favicon.ico" alt="Social boost icon" id="logo" [routerLink]="['/']" height="68px" width="68px"></li> -->
+              <li><h1 class="logo-text" [routerLink]="['/']">Book Vitals</h1></li>
             </ul>
             <ul class="nav-right full" [ngClass]="{'activated': menuToggled === true}">
               <li><a [routerLink]="['.']" fragment="mission" (click)="toggleMenu()">Mission</a></li>
@@ -22,62 +22,61 @@
     <div class="lottie-container" id="center">
       <ng-lottie [options]="heroLottieOptions"></ng-lottie>
     </div>
-    <img src="assets/img/hero-image.png" alt="Hero image" id="hero-image">
     <div id="circular-text">
-      <h1>Feel the beating<br> pulse of your<br>favorite books!</h1> 
-      <p class="smaller-text">Unlock the hidden depths of literature with AI-powered features<br> that breathe life into your favorite books.<br> Immerse yourself in the pulsating world of enriched storytelling,<br> where artificial intelligence uncovers new dimensions,<br> delivers profound insights, and empowers you<br> to truly feel the heartbeat of each literary masterpiece.</p>
+      <h1>We use AI<br> to revolutionize<br> the way people learn. </h1> 
+      <p class="smaller-text">We build AI-powered apps that redefine how students,<br> spiritual seekers and entrepreneurs study books.</p>
     </div>
-    <button id="scroll-btn" [routerLink]="['.']" fragment="mission"></button>
+    <button id="scroll-btn" [routerLink]="['.']" fragment="mission" aria-label="Scroll Down"></button>
   </div>
 </div>
 <div class="mission-section" #mission id="mission">
   <p class="gradient">Our Mission</p>
-  <h1 class="section-title">Redefine Reading Through AI</h1>
-  <img src="assets/img/purple-blob.jpg" alt="Purple blob" id="blob-image" #blobImage [style.transform]="'translateY(' + (blobScrollPercent) + '%)'">
+  <h1 class="section-title">To create personalized AI study experiences.</h1>
+  <img src="assets/img/purple-blob.webp" width="400px" height="400px" alt="Purple blob" id="blob-image" #blobImage [style.transform]="'translateY(' + (blobScrollPercent) + '%)'">
   <div class="mission-cards">
     <div class="mission-card">
-      <h1>Lorem ipsum</h1>
+      <!-- <h1>Elevating the Reading Experience</h1> -->
       <p class="mission-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Our mission is to use AI to transform the way students, spiritual seekers, and entrepreneurs study books. Grounded in our belief that the next decade will witness a revolution in education through AI-driven software, we aim to pioneer this change. We're committed to creating AI-powered apps that personalize content, gauge engagement, measure understanding, and provide immediate feedback. Above all, we strive to understand and respond to the unique motivation triggers of each learner, truly enhancing and personalizing the study experience for diverse learners.
       </p>
     </div>
-    <div class="mission-card">
-      <h1>Lorem ipsum </h1>
+    <!-- <div class="mission-card">
+      <h1>AI-Enhanced Exploration of Sacred Texts</h1>
       <p class="mission-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Our mission is to use AI to transform the way students, spiritual seekers, and entrepreneurs study books. Grounded in our belief that the next decade will witness a revolution in education through AI-driven software, we aim to pioneer this change. We're committed to creating AI-powered apps that personalize content, gauge engagement, measure understanding, and provide immediate feedback. Above all, we strive to understand and respond to the unique motivation triggers of each learner, truly enhancing and personalizing the study experience for diverse learners.
       </p>
-    </div>
+    </div> -->
   </div>
 </div>
 <div class="products-section" #products id="products">
   <div class="gradient-top"></div>
   <div class="gradient-bottom"></div>
-  <div class="rotated-text-container">
+  <!-- <div class="rotated-text-container">
     <div class="rotate-text">
       <h1 class="gradient">Our Products</h1>
     </div>
-  </div>
+  </div> -->
   <div class="basmo-container">
-    <div class="basmo" *ngIf="showProducts" (click)="goToWebsite('https://basmo.app/')">
+    <div class="basmo" (click)="goToWebsite('https://basmo.app/')">
       <h1>Basmo</h1>
-      <img src="assets/img/products/basmo-phone.png" alt="" class="product-image">
+      <img src="assets/img/products/basmo-phone.webp" alt="Basmo App Screenshot" class="product-image" *ngIf="showProducts" height="611px" width="338px">
       <div class="ribbon ribbon-top-right"><span>Explore</span></div>
       <div class="bottom-div" (click)="doNothing($event)">
-        <h2>Explore more with AI</h2>
+        <h2>Study popular books</h2>
         <p>Become the ultimate reader with Basmo’s AI Chatbot.</p>
-        <a href="https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666"><img src="assets/img/download-app-store-2x.webp" alt="Download the iOS Bible Chat app"></a>
+        <a href="https://apps.apple.com/us/app/basmo-book-reading-tracker/id1542456934"><img src="assets/img/download-app-store-2x.webp" alt="Download the iOS Basmo app" width="170px" height="56.66px"></a>
       </div>
     </div>
   </div>
   <div class="bibleChat-container">
-    <div class="bibleChat" *ngIf="showProducts" (click)="goToWebsite('https://thebiblechat.app/')">
+    <div class="bibleChat" (click)="goToWebsite('https://thebiblechat.app/')">
       <h1><span class="highlight">Bible</span> Chat</h1>
-      <img src="assets/img/products/bible-chat.webp" alt="" class="product-image">
+      <img src="assets/img/products/bible-chat.webp" alt="Bible Chat App Screenshot" class="product-image" *ngIf="showProducts" height="611px" width="335px">
       <div class="ribbon ribbon-top-right"><span>Explore</span></div>
       <div class="bottom-div" (click)="doNothing($event)">
-        <h2>Grow More In Your Faith</h2>
+        <h2>Study the Bible</h2>
         <p>Interactive Bible Learning. Powered by the Most Advanced AI.</p>
-        <a href="https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666"><img src="assets/img/download-app-store-2x.webp" alt="Download the iOS Bible Chat app"></a>
+        <a href="https://apps.apple.com/us/app/bible-study-ai-chatbot-memory/id6448849666"><img src="assets/img/download-app-store-2x.webp" alt="Download the iOS Bible Chat app"  width="170px" height="56.66px"></a>
       </div>
     </div>
   </div>
@@ -85,53 +84,53 @@
 <div class="team-section" id="team" #team>
   <div class="team-div">
     <p class="gradient">Meet Our</p>
-    <h1 class="section-title">Team of Professionals</h1>
+    <h1 class="section-title">Crew of Innovators</h1>
     <hr>
     <div class="team-portraits">
       <div class="portraits desktop">
-        <img class="portrait" *ngFor="let portrait of portraitsTop" [src]="'assets/img/portraits/' + portrait.image" alt="">
+        <img class="portrait" *ngFor="let portrait of portraitsTop" [src]="'assets/img/portraits/' + portrait.image" [alt]="'Portrait ' + portrait.name" width="130px" height="130px">
       </div>
       <div class="portraits desktop">
-        <img class="portrait" *ngFor="let portrait of portraitsBottom" [src]="'assets/img/portraits/' + portrait.image" alt="">
+        <img class="portrait" *ngFor="let portrait of portraitsBottom" [src]="'assets/img/portraits/' + portrait.image" [alt]="'Portrait ' + portrait.name" width="130px" height="130px">
       </div>
       <div class="portraits mobile">
-        <img class="portrait" *ngFor="let portrait of allPortraits" [src]="'assets/img/portraits/' + portrait.image" alt="">
+        <img class="portrait" *ngFor="let portrait of allPortraits" [src]="'assets/img/portraits/' + portrait.image" [alt]="'Portrait ' + portrait.name" width="100px" height="100px">
       </div>
     </div>
-    <p class="secondary-text">Our team comprises a collective of passionate professionals, driven by their love for literature and expertise in AI. With their extensive knowledge and unwavering dedication, they are committed to crafting exceptional experiences for book enthusiasts. Together, we harness the power of technology to revolutionize the way you connect with your favorite stories.</p>
+    <p class="secondary-text">Our crew is a mixture of dedicated professionals, fueled by a shared passion for literature and an<br> in-depth understanding of AI. They champion our mission to reshape the way books are studied, catering to diverse learners. United, we wield the power of AI to usher in a new era of personalized, engaging, and motivational book learning experiences.</p>
   </div>
   <div class="team-gallery" #teams>
     <div class="gradient-top"></div>
     <div class="gradient-bottom"></div>
     <div class="scroll-up-gallery" [style.transform]="'translateY(' + (galleryScrollPercent - 105) + '%)'">
-      <img class="card-img" src="assets/img/team/guy-having-fun.jpeg" alt="">
-      <img class="card-img" src="assets/img/team/Birthday.jpg" alt="">
-      <img class="card-img" src="assets/img/team/fun-at-the-office.jpg" alt="">
-      <img class="card-img" src="assets/img/team/Birthday.jpg" alt="">
-      <img class="card-img" src="assets/img/team/fun-at-the-office.jpg" alt="">
-      <img class="card-img" src="assets/img/team/Birthday.jpg" alt="">
-      <img class="card-img" src="assets/img/team/guy-having-fun.jpeg" alt="">
-      <img class="card-img" src="assets/img/team/colleagues-having-fun.jpg" alt="">
-      <img class="card-img" src="assets/img/team/fun-at-the-office.jpg" alt="">
-      <img class="card-img" src="assets/img/team/Birthday.jpg" alt="">
-      <img class="card-img" src="assets/img/team/guy-having-fun.jpeg" alt="">
-      <img class="card-img" src="assets/img/team/colleagues-having-fun.jpg" alt="">
-      <img class="card-img" src="assets/img/team/fun-at-the-office.jpg" alt="">
+      <img class="card-img" src="assets/img/team/presentation.webp" alt="Giving Presentation" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/birthday.webp" alt="Office Birthday Picture" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working-pc.webp" alt="Working On The PC" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working.webp" alt="OWorking From The Couch" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/break-time.webp" alt="Break Time" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/presentation.webp" alt="Giving Presentation" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/birthday.webp" alt="Office Birthday Picture" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working-pc.webp" alt="Working On The PC" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working.webp" alt="OWorking From The Couch" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/break-time.webp" alt="Break Time" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/presentation.webp" alt="Giving Presentation" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/birthday.webp" alt="Office Birthday Picture" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working-pc.webp" alt="Working On The PC" height="250px" width="440px">
     </div>
     <div class="scroll-down-gallery desktop" [style.transform]="'translateY(' + (-250 - galleryScrollPercent ) + '%)'">
-      <img class="card-img" src="assets/img/team/guy-having-fun.jpeg" alt="">
-      <img class="card-img" src="assets/img/team/colleagues-having-fun.jpg" alt="">
-      <img class="card-img" src="assets/img/team/fun-at-the-office.jpg" alt="">
-      <img class="card-img" src="assets/img/team/guy-having-fun.jpeg" alt="">
-      <img class="card-img" src="assets/img/team/fun-at-the-office.jpg" alt="">
-      <img class="card-img" src="assets/img/team/guy-having-fun.jpeg" alt="">
-      <img class="card-img" src="assets/img/team/Birthday.jpg" alt="">
-      <img class="card-img" src="assets/img/team/colleagues-having-fun.jpg" alt="">
-      <img class="card-img" src="assets/img/team/fun-at-the-office.jpg" alt="">
-      <img class="card-img" src="assets/img/team/Birthday.jpg" alt="">
-      <img class="card-img" src="assets/img/team/guy-having-fun.jpeg" alt="">
-      <img class="card-img" src="assets/img/team/colleagues-having-fun.jpg" alt="">
-      <img class="card-img" src="assets/img/team/fun-at-the-office.jpg" alt="">
+      <img class="card-img" src="assets/img/team/presentation.webp" alt="Giving Presentation" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/birthday.webp" alt="Office Birthday Picture" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working-pc.webp" alt="Working On The PC" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working.webp" alt="OWorking From The Couch" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/break-time.webp" alt="Break Time" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/presentation.webp" alt="Giving Presentation" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/birthday.webp" alt="Office Birthday Picture" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working-pc.webp" alt="Working On The PC" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working.webp" alt="OWorking From The Couch" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/break-time.webp" alt="Break Time" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/presentation.webp" alt="Giving Presentation" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/birthday.webp" alt="Office Birthday Picture" height="250px" width="440px">
+      <img class="card-img" src="assets/img/team/working-pc.webp" alt="Working On The PC" height="250px" width="440px">
     </div>
   </div>
 </div>
@@ -141,21 +140,22 @@
   <p class="gradient">Have a Question?</p>
   <h1 class="section-title">Get In Contact</h1>
 
-  <img src="assets/img/envelope-back.png" alt="Envelope back" class="envelope-back">
-    <img src="assets/img/envelope-front.png" alt="Envelope front" class="envelope-front">
+  <img src="assets/img/envelope-back.webp" alt="Envelope back" class="envelope-back" height="660px" width="1000px">
+  <img src="assets/img/envelope-front.webp" alt="Envelope front" class="envelope-front" height="660px" width="1000px">
     
 
-    <div class="contact-form">
-      <form action=" " [style.transform]="'translateY(' + (formScrollPercent) + '%)'">
-        <!-- <h1>Contact form</h1> -->
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
-        <label for="name">Email:</label>
-        <input type="text" name="name" id="name">
-        <label for="name">Subject:</label>
-        <input type="text" name="name" id="name">
-        <label for="name"> Message:</label>
-        <textarea type="text" name="name" id="name" rows="1"></textarea>
-      </form>
-    </div>
+  <div class="contact-form">
+    <form action=" " [style.transform]="'translateY(' + (formScrollPercent) + '%)'">
+      <!-- <h1>Contact form</h1> -->
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name">
+      <label for="email">Email:</label>
+      <input type="text" name="name" id="email">
+      <label for="subject">Subject:</label>
+      <input type="text" name="name" id="subject">
+      <label for="message"> Message:</label>
+      <textarea type="text" name="name" id="message" rows="1"></textarea>
+      <button>Send</button>
+    </form>
+  </div>
 </div>
