@@ -81,20 +81,39 @@
     </div>
   </div>
 </div>
-<div class="team-section" id="team" #team>
+<div class="team-section" id="team" #team itemscope itemtype="https://schema.org/Organization">
   <div class="team-div">
     <p class="gradient">Meet Our</p>
     <h1 class="section-title">Crew of Innovators</h1>
     <hr>
     <div class="team-portraits">
-      <div class="portraits desktop">
-        <img class="portrait" *ngFor="let portrait of portraitsTop" [src]="'assets/img/portraits/' + portrait.image" [alt]="'Portrait ' + portrait.name" width="130px" height="130px">
+      <div class="portraits desktop"  itemscope itemtype="https://schema.org/Person">
+        <ng-container itemprop="employee" itemscope itemtype="https://schema.org/Person" *ngFor="let portrait of portraitsTop"> 
+          <img class="portrait" [src]="'assets/img/portraits/' + portrait.image" [alt]="'Portrait ' + portrait.name" width="130px" height="130px">
+          <div class="aditional-data" style="display: none;">
+            <p itemprop="name">{{ portrait.name }}</p>
+            <p itemprop="jobTitle">{{portrait.occupation}}</p>
+          </div>
+        </ng-container>
       </div>
       <div class="portraits desktop">
-        <img class="portrait" *ngFor="let portrait of portraitsBottom" [src]="'assets/img/portraits/' + portrait.image" [alt]="'Portrait ' + portrait.name" width="130px" height="130px">
+        <ng-container itemprop="employee" itemscope itemtype="https://schema.org/Person" *ngFor="let portrait of portraitsBottom"> 
+          <img class="portrait" [src]="'assets/img/portraits/' + portrait.image" [alt]="'Portrait ' + portrait.name" width="130px" height="130px">
+          <div class="aditional-data" style="display: none;">
+            <p itemprop="name">{{ portrait.name }}</p>
+            <p itemprop="jobTitle">{{portrait.occupation}}</p>
+          </div>
+        </ng-container>
+
       </div>
       <div class="portraits mobile">
-        <img class="portrait" *ngFor="let portrait of allPortraits" [src]="'assets/img/portraits/' + portrait.image" [alt]="'Portrait ' + portrait.name" width="100px" height="100px">
+        <ng-container itemprop="employee" itemscope itemtype="https://schema.org/Person" *ngFor="let portrait of allPortraits"> 
+        <img class="portrait" [src]="'assets/img/portraits/' + portrait.image" [alt]="'Portrait ' + portrait.name" width="100px" height="100px">
+        <div class="aditional-data" style="display: none;">
+          <p itemprop="name">{{ portrait.name }}</p>
+          <p itemprop="jobTitle">{{portrait.occupation}}</p>
+        </div>
+      </ng-container>
       </div>
     </div>
     <p class="secondary-text">Our crew is a mixture of dedicated professionals, fueled by a shared passion for literature and an<br> in-depth understanding of AI. They champion our mission to reshape the way books are studied, catering to diverse learners. United, we wield the power of AI to usher in a new era of personalized, engaging, and motivational book learning experiences.</p>

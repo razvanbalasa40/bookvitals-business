@@ -48,7 +48,7 @@ export class HomeComponent {
   };
 
   public heroLottieOptions: AnimationOptions = {
-    path: 'assets/lottie/ai-reading-book.json',
+    path: 'assets/lottie/machine-learning.json',
     loop: true,
     autoplay: true,
   };
@@ -57,45 +57,46 @@ export class HomeComponent {
     {
       image: 'Laurentiu.webp',
       name: 'Laurențiu Bălașa',
-      occupation: 'CEO',
+      occupation: 'CEO, Founder',
     },
     {
       image: 'Marius.webp',
       name: 'Marius Iordache',
-      occupation: 'Programmer',
+      occupation: 'Programmer, Co-Founder',
+    },
+    {
+      image: 'Cristina.webp',
+      name: 'Cristina Lupu',
+      occupation: 'ASO Manager',
     },
     {
       image: 'Razvan.webp',
       name: 'Răzvan Bălașa',
       occupation: 'Programmer',
     },
-    {
-      image: 'Mariusica.webp',
-      name: 'Marius Stancu',
-      occupation: 'Marketing Expert',
-    },
-    {
-      image: 'Andreea.webp',
-      name: 'Andreea Trandafir',
-      occupation: 'Marketing Expert',
-    },
+
+    // {
+    //   image: 'Andreea.webp',
+    //   name: 'Andreea Trandafir',
+    //   occupation: 'Marketing Expert',
+    // },
   ];
 
   public portraitsBottom = [
-    {
-      image: 'Irina.webp',
-      name: 'Irina',
-      occupation: 'UX/UI',
-    },
+    // {
+    //   image: 'Irina.webp',
+    //   name: 'Irina',
+    //   occupation: 'UX/UI',
+    // },
     {
       image: 'Otilia.webp',
       name: 'Otilia Bărbat',
       occupation: 'UX/UI & Graphic Designer',
     },
     {
-      image: 'Cristina.webp',
-      name: 'Cristina Lupu',
-      occupation: 'ASO Manager',
+      image: 'Mariusica.webp',
+      name: 'Marius Stancu',
+      occupation: 'Marketing Expert',
     },
     {
       image: 'Lidia.webp',

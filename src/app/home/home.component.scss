@@ -241,7 +241,7 @@ p.gradient {
       // margin-left: -100px;
       width: 30%;
       // margin-bottom: 175px;
-      display: none;
+      // display: none;
     }
 
     #circular-text {
@@ -929,8 +929,7 @@ p.gradient {
   }
 }
 
-@media (max-width: 1300px) {
-
+@media (max-width: 430px) {
   .background-container {
     height: 100svh;
     .hero-section {
@@ -951,12 +950,12 @@ p.gradient {
         position: absolute;
         left: 10%;
         // top: 45%;
-        top: 20%;
+        top: 45%;
         color: #fff;
         text-align: left;
 
         h1 {
-          font-size: 10vw!important;
+          font-size: 8vw!important;
         }
 
         .smaller-text {
@@ -978,7 +977,9 @@ p.gradient {
       }
     }
   }
+}
 
+@media (max-width: 1000px) {
   .mission-section {
     padding: 64px 0;
     // position: relative;
