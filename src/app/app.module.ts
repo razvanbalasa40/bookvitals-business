@@ -8,13 +8,14 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LottieModule } from 'ngx-lottie';
 import { AppearDirective } from './shared/directives/appear.directive';
+import { CareerComponent } from './career/career.component';
 
 export function playerFactory() {
   return import('lottie-web');
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent, AppearDirective],
+  declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent, AppearDirective, CareerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

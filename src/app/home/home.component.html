@@ -1,34 +1,4 @@
-<div class="background-container">
-  <div class="hero-section" id="home" #home>
-    <div class="header-container">
-      <header class="header">
-          <nav>
-            <ul class="nav-left">
-              <!-- <li><img src="favicon.ico" alt="Social boost icon" id="logo" [routerLink]="['/']" height="68px" width="68px"></li> -->
-              <li><h1 class="logo-text" [routerLink]="['/']">Book Vitals</h1></li>
-            </ul>
-            <ul class="nav-right full" [ngClass]="{'activated': menuToggled === true}">
-              <li><a [routerLink]="['.']" fragment="mission" (click)="toggleMenu()">Mission</a></li>
-              <li><a [routerLink]="['.']" fragment="products" (click)="toggleMenu()">Products</a></li>
-              <li><a [routerLink]="['.']" fragment="team" (click)="toggleMenu()">Team</a></li>
-              <li><a [routerLink]="['.']" fragment="contact" (click)="toggleMenu()">Contact</a></li>
-            </ul>
-            <ul class="nav-right burger" (click)="toggleMenu()">
-              <li><img [src]="burgerSrc" alt="Burger menu icon" width="60px" height="60px"></li>
-            </ul>
-          </nav>
-      </header>
-    </div>
-    <div class="lottie-container" id="center">
-      <ng-lottie [options]="heroLottieOptions"></ng-lottie>
-    </div>
-    <div id="circular-text">
-      <h1>Stories With a Heartbeat.</h1> 
-      <p class="smaller-text">We build AI-powered apps that redefine how <br>the next generation of readers interact with books.</p>
-    </div>
-    <button id="scroll-btn" [routerLink]="['.']" fragment="mission" aria-label="Scroll Down"></button>
-  </div>
-</div>
+
 <div class="mission-section" #mission id="mission">
   <p class="gradient">Our Mission</p>
   <h1 class="section-title">To create personalized AI study experiences.</h1>

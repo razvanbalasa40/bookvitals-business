@@ -1,0 +1,183 @@
+p.gradient {
+  font-size: 1.5rem;
+  padding-left: 64px;
+  padding-top: 12px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 3.25rem;
+  margin-top: 0;
+  padding-left: 64px;
+}
+
+.mission-section {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  // min-height: 1100px;
+  // border-bottom: 1px solid #acacac;
+  position: relative;
+  z-index: 1;
+
+  padding: 64px 32px;
+  margin-top: 32px;
+  
+  p.gradient {
+    margin-top: 0;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+  }
+  
+
+  .mission-text {
+    padding: 16px 64px;
+    // max-width: 600px;
+  }
+
+  .mission-cards {
+    padding: 0px 64px;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    
+
+    .mission-card {
+      margin-bottom: 64px;
+
+      h1 {
+        padding-left: 64px;
+
+      }
+
+      p {
+        margin: 0;
+        font-size: 18px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  #blob-image {
+    width: 400px;
+    // filter: blur(1px);
+    position: absolute;
+    right: 20%;
+    bottom: 10px;
+    z-index: 1;
+  }
+}
+
+.benefits-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.jobs-section {
+  padding: 0px 96px;
+  // margin-right: 32px;
+
+  .title {
+    font-size: 1.5rem;
+    width: 100%;
+    cursor: pointer;
+    background-color: #6616a0;
+    // box-shadow: 0 6px 34px #6616A0;
+    color: #fff;
+    padding: 0px 32px;
+    box-sizing: border-box;
+    font-weight: 600;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .sign {
+      font-size: 2rem;
+    }
+  }
+
+  .content {
+    box-sizing: border-box;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    background-color: rgba(#6616a0, 0.1);
+    width: 100%;
+    padding: 0px 32px;
+
+    p {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .showContent {
+    .content {
+      max-height: 2000px;
+    }
+  }
+}
+
+.bottom-margin {
+  margin-bottom: 350px;
+}
+
+@media (max-width: 1000px) {
+  .jobs-section {
+    padding: 0px 16px;
+  }
+
+  .bottom-margin {
+    margin-bottom: 150px;
+  }
+
+  .mission-section {
+    padding: 64px 0;
+    // position: relative;
+
+    .mission-cards {
+      padding-left: 0;
+      padding-right: 0;
+      
+      .mission-card {
+        h1 {
+          padding-left: 16px;
+          font-size: 24px;
+        }
+
+        p {
+          padding: 0;
+          padding-left: 16px;
+          padding-right: 16px;
+          font-size: 16px;
+          line-height: 32px;
+        }
+      }
+    }
+    p.gradient {
+      padding-left: 18px;
+      z-index: 2;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      padding-left: 16px;
+      z-index: 2;
+      position: relative;
+    }
+
+    #blob-image {
+      display: none;
+    }
+  }
+}

@@ -47,12 +47,6 @@ export class HomeComponent {
     autoplay: true,
   };
 
-  public heroLottieOptions: AnimationOptions = {
-    path: 'assets/lottie/machine-learning.json',
-    loop: true,
-    autoplay: true,
-  };
-
   public portraitsTop = [
     {
       image: 'Laurentiu.webp',

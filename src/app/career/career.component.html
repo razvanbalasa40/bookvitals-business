@@ -1,0 +1,48 @@
+
+<div class="mission-section" #mission id="mission">
+  <p class="gradient">Start Your Journey</p>
+  <h1 class="section-title">Innovate, Impact, and Grow with Us!</h1>
+  <!-- <img src="assets/img/purple-blob.webp" width="400px" height="400px" alt="Purple blob" id="blob-image" #blobImage [style.transform]="'translateY(' + (blobScrollPercent) + '%)'"> -->
+  <div class="mission-cards">
+    <!-- <div class="mission-card">
+      <h1>Unleash Your Genius</h1>
+      <p class="mission-text">
+        At BookVitals, innovation isn't just a buzzword—it's the heartbeat of everything we do. We're on a quest to redefine the digital landscape, crafting apps that enlighten, educate, and inspire. Our journey is fueled by the spirit of discovery and the desire to make a lasting impact. If you're a visionary who dreams big, a creator who dares to think differently, and an innovator eager to shape the future of digital experiences, we're looking for you. Join us as we turn bold ideas into reality, in an environment where the only limit is your imagination.
+      </p>
+    </div> -->
+    <div class="mission-card">
+      <!-- <h1>Shape the Future with Us</h1> -->
+      <p class="mission-text">
+        Embark on a transformative journey with BookVitals, where your work transcends the ordinary and becomes a part of something truly extraordinary. Our team is a collective of dreamers and doers, united by a shared passion for pushing boundaries and challenging the status quo. We believe in the power of collaboration to bring groundbreaking ideas to life. Here, your creativity will flourish, your skills will be honed, and your contributions will make a difference in the digital world. Together, let's build apps that not only stand the test of time but also leave a mark on the hearts and minds of our community.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="benefits-section">
+  <h1>Benefits</h1>
+  <p>Working at BookVitals comes with many benefits. Here are just a few:</p>
+  
+  <div>
+
+  </div>
+
+  <hr>
+
+  <p></p>
+</div> -->
+
+<div class="jobs-section">
+  <div *ngFor="let job of jobs; let i = index" [ngClass]="{'showContent': job.active}" [id]="job.id">
+    <div class="title" (click)="makeActive(i)">
+      <p style="white-space: pre-line;">{{job.title}}</p>
+      <p *ngIf="!job.active" class="sign">+</p>
+      <p *ngIf="job.active" class="sign">-</p>
+    </div>
+    <div class="content">
+      <p style="white-space: pre-line;">{{job.text}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-margin"></div>
