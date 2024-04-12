@@ -1,4 +1,3 @@
-
 <div class="mission-section" #mission id="mission">
   <p class="gradient">Our Mission</p>
   <h1 class="section-title">To create personalized AI study experiences.</h1>
@@ -124,27 +123,56 @@
   </div>
 </div>
 
-<div class="contact-section" #contact id="contact">
+<div class="contact-info-section" #contact id="contact">
+  <p class="gradient">Contact</p>
+  <h1 class="section-title">Where can you reach us?</h1>
+
+  <div class="contact-icons">
+    <div *ngFor="let icon of contactIcons" class="iconContainer">
+      <div class="icon">
+        <img [src]="icon.iconPath" [alt]="icon.iconAlt" class="iconImg">
+      </div>
+      <p class="iconTxt">{{ icon.text }}</p>
+    </div>
+  </div>
+
+  <div #map class="map"></div>
+
+</div>
+
+<div class="contact-section" #email id="email">
   <div class="gradient-top"></div>
   <p class="gradient">Have a Question?</p>
-  <h1 class="section-title">Get In Contact</h1>
+  <h1 class="section-title">Write us an email</h1>
 
   <img src="assets/img/envelope-back.webp" alt="Envelope back" class="envelope-back" height="660px" width="1000px">
   <img src="assets/img/envelope-front.webp" alt="Envelope front" class="envelope-front" height="660px" width="1000px">
-    
 
   <div class="contact-form">
-    <form action=" " [style.transform]="'translateY(' + (formScrollPercent) + '%)'">
-      <!-- <h1>Contact form</h1> -->
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name">
-      <label for="email">Email:</label>
-      <input type="text" name="name" id="email">
-      <label for="subject">Subject:</label>
-      <input type="text" name="name" id="subject">
-      <label for="message"> Message:</label>
-      <textarea type="text" name="name" id="message" rows="1"></textarea>
-      <button>Send</button>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" *ngIf="!sentMessage">
+      <label for="Email">Email <span style="color: red">*</span></label>
+      <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Enter email"formControlName="Email">
+
+      <label for="fullname">Name <span style="color: red">*</span></label>
+      <input type="text" class="form-control" name="Name" placeholder="Name" formControlName="Name">
+
+      <label for="fullname">Subject <span style="color: red">*</span></label>
+      <input type="text" class="form-control" name="Subject" placeholder="Subject" formControlName="Subject">
+
+      <label for="comment">Message <span style="color: red">*</span></label>
+      <textarea class="form-control" formControlName="Message" name="Message" rows="1">
+      </textarea>‚
+      <button type="submit" class="btn btn-primary send-button" [disabled]="!contactForm.valid">Send</button>
+    </form>
+  
+    <form *ngIf="sentMessage">
+      <div class="lottie-container" *ngIf="sending">
+        <ng-lottie [options]="lottieSendingOptions"></ng-lottie>
+      </div>
+      <div class="text-container" *ngIf="!sending">
+        <p>We have received your message and will get back to you as fast as we can!</p>
+      </div>
     </form>
   </div>
 </div>

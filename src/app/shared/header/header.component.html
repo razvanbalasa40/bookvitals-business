@@ -12,7 +12,9 @@
               <li><a [routerLink]="['.']" fragment="products" (click)="toggleMenu()">Products</a></li>
               <li><a [routerLink]="['.']" fragment="team" (click)="toggleMenu()">Team</a></li>
               <li><a [routerLink]="['.']" fragment="contact" (click)="toggleMenu()">Contact</a></li>
+              <!-- <li><a [routerLink]="['.']" fragment="email" (click)="toggleMenu()">Get in touch</a></li> -->
               <li><a [routerLink]="['/career']"(click)="toggleMenu()">Career</a></li>
+              <!-- <li><a [routerLink]="['/financing']"(click)="toggleMenu()">Financing</a></li> -->
             </ul>
             <ul class="nav-right burger" (click)="toggleMenu()">
               <li><img [src]="burgerSrc" alt="Burger menu icon" width="60px" height="60px"></li>
@@ -39,11 +41,13 @@
           <li><h1 id="logo-text" [routerLink]="['/']" fragment="home">Book Vitals</h1></li>
         </ul>
         <ul class="nav-right full" [ngClass]="{'activated': menuToggled === true}">
-          <li><a [routerLink]="['/']" fragment="mission" (click)="toggleMenu()">Mission</a></li>
-          <li><a [routerLink]="['/']" fragment="products" (click)="toggleMenu()">Products</a></li>
-          <li><a [routerLink]="['/']" fragment="team" (click)="toggleMenu()">Team</a></li>
-          <li><a [routerLink]="['/']" fragment="contact" (click)="toggleMenu()">Contact</a></li>
+          <li><a [routerLink]="['.']" fragment="mission" (click)="toggleMenu()">Mission</a></li>
+          <li><a [routerLink]="['.']" fragment="products" (click)="toggleMenu()">Products</a></li>
+          <li><a [routerLink]="['.']" fragment="team" (click)="toggleMenu()">Team</a></li>
+          <li><a [routerLink]="['.']" fragment="contact" (click)="toggleMenu()">Contact</a></li>
+          <!-- <li><a [routerLink]="['.']" fragment="email" (click)="toggleMenu()">Get in touch</a></li> -->
           <li><a [routerLink]="['/career']" (click)="toggleMenu()">Career</a></li>
+          <!-- <li><a [routerLink]="['/financing']" (click)="toggleMenu()">Financing</a></li> -->
         </ul>
         <ul class="nav-right burger" (click)="toggleMenu()">
           <li><img [src]="burgerSrc" alt="Burger menu icon" width="60px" height="60px"></li>

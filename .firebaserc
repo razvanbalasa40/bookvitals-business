@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "book-vitals-business"
+  },
+  "targets": {
+    "book-vitals-business": {
+      "hosting": {
+        "bookvitals-business": [
+          "book-vitals-business"
+        ]
+      }
+    }
   }
 }

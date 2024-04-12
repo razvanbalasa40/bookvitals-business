@@ -122,7 +122,7 @@ p.gradient {
 
   .showContent {
     .content {
-      max-height: 2000px;
+      max-height: 4000px;
     }
   }
 }
@@ -180,4 +180,17 @@ p.gradient {
       display: none;
     }
   }
+}
+
+.contact-button {
+  padding: 12px 18px;
+  /* border: 2px solid black; */
+  border-radius: 32px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 63px;
+  background: #6616a0;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }

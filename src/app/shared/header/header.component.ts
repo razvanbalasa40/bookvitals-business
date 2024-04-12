@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
         switch (event.url.split('#')[0]) {
           case '/career':
             this.toptext = 'Join Our Team';
-            this.bottomTextFirst = 'Unlock Your Potential';
+            this.bottomTextFirst = 'Unlock Your Potential ';
             this.bottomTextSeconds = 'In a World of Opportunity.';
             this.topLottiePath = 'assets/lottie/career.json';
             this.scrollBtnText = 'BROWSE JOBS';
@@ -41,8 +41,21 @@ export class HeaderComponent implements OnInit {
               path: this.topLottiePath,
             };
             break;
+          case '/financing':
+            this.toptext = 'Funded for Innovation ';
+            this.bottomTextFirst = 'Empowering Literacy Through ';
+            this.bottomTextSeconds = 'Strategic Sponsorships.';
+            this.topLottiePath = 'assets/lottie/financing.json';
+            this.scrollBtnText = 'BROWSE JOBS';
+            this.showScroll = false;
+
+            this.heroLottieOptions = {
+              ...this.heroLottieOptions,
+              path: this.topLottiePath,
+            };
+            break;
           default:
-            this.toptext = 'Stories With a Heartbeat.';
+            this.toptext = 'Stories With a Heartbeat. ';
             this.bottomTextFirst =
               'We build AI-powered apps that redefine how ';
             this.bottomTextSeconds =
