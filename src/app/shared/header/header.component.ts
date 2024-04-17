@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   public burgerSrc = 'assets/img/burger-menu-icon.svg';
   public showHeader = false;
 
-  public toptext = 'Stories With a Heartbeat.';
+  public toptext = 'Books With a Heartbeat.';
   public bottomTextFirst = 'We build AI-powered apps that redefine how ';
   public bottomTextSeconds =
     'the next generation of readers interact with books.';
@@ -55,7 +55,7 @@ export class HeaderComponent implements OnInit {
             };
             break;
           default:
-            this.toptext = 'Stories With a Heartbeat. ';
+            this.toptext = 'Books With a Heartbeat. ';
             this.bottomTextFirst =
               'We build AI-powered apps that redefine how ';
             this.bottomTextSeconds =
